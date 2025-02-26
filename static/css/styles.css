@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Typography */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Model Selection */
+.model-selection {
+    margin-bottom: 1.5rem;
+}
+
+.model-selection label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.model-selection select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.model-selection select:hover {
+    border-color: #007bff;
+}
+
+/* File Upload */
+.file-upload {
+    margin-bottom: 2rem;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.upload-label:hover {
+    background-color: #0056b3;
+}
+
+.upload-label input[type="file"] {
+    display: none;
+}
+
+/* Results Section */
+.results {
+    margin-top: 2rem;
+}
+
+/* Image Display */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.image-box {
+    flex: 1;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.image-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Industry-Specific Layout */
+.industry-results {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Message */
+.error-message {
+    color: #dc3545;
+    margin-top: 1rem;
+    font-weight: bold;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-box {
+        max-width: 100%;
+    }
+}

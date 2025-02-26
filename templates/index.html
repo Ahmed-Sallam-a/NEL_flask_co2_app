@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emissions Analysis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- Use url_for to reference the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>CO2 Emissions Analysis</h1>
+        <p>Upload an image and select a model to analyze CO2 emissions.</p>
+
+        <!-- Model Selection -->
+        <div class="model-selection">
+            <label for="model-type">Select Model:</label>
+            <select id="model-type">
+                <option value="Industry">Industry</option>
+            </select>
+        </div>
+
+        <!-- File Upload -->
+        <div class="file-upload">
+            <label class="upload-label" for="file-input">
+                Upload Image
+                <input type="file" id="file-input" accept=".tif,.jpg,.png">
+            </label>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results">
+            <h2>Results</h2>
+            <div class="image-container">
+                <!-- Industry Results -->
+                <div id="industry-results" class="industry-results">
+                    <div class="image-box">
+                        <h3>Industry - Original</h3>
+                        <img id="original-industry-image" alt="Original Industry Image">
+                    </div>
+                    <div class="image-box">
+                        <h3>Industry - Prediction</h3>
+                        <img id="prediction-industry-image" alt="Predicted Industry Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="spinner"></div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message"></div>
+    </div>
+
+    <!-- Use url_for to reference the JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
